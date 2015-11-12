@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Timelapse Cam</title>
+    <link rel="stylesheet" type="text/css" href="timelapse.css">
+
+    <!-- imagelist.php returns a playable list of img files -->
+    <script src="imagelist.php"></script>
+    <script type="text/javascript">
+        // Always start at 0 in the list
+        var frame = 0;
+
+        function imageseq() {
+            var curimg = dirArray[frame];
+            // Modify the dom
+            document.getElementById('tl-image').setAttribute('src', curimg);
+            // Loop through the array excluding the last image (- 2) in case in transit
+            frame = (frame < dirArray.length - 2) ? frame + 1 : 0;
+        }
+
+        window.onload = function() {
+            setInterval("imageseq()", 1500)
+        };
+    </script>
+
+  </head>
+
+  <body class="tl-body">
+    <div class="tl-image">
+      <img id="tl-image" class="tl-image">
+    </div>
+  </body>
+</html>
