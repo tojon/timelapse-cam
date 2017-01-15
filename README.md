@@ -8,7 +8,7 @@ timelapse-cam
 
 
 #### Example
-A real world example can be viewed [here](https://torontowindsurfingclub.com/webcam/livecam.htm).
+A real world example can be viewed [here](https://torontowindsurf.com).
 
 
 #### Limitations
